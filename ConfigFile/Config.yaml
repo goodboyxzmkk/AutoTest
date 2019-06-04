@@ -1,0 +1,46 @@
+UAT.DBconfig:
+  host: 59.111.124.211
+  port: 33161
+  user: root
+  pwd: zhMysql6567
+  database:
+    customer: yunyou_customer
+    file: yunyou_file
+    gameproject: yunyou_gameproject
+    goods: yunyou_goods
+    message: yunyou_message
+    order: yunyou_order
+    price: yunyou_price
+    promotion: yunyou_promotion
+    schedule: yunyou_schedule
+    terminal: yunyou_terminal
+    thirdpartypay: yunyou_thirdpartypay
+    ui: yunyou_ui
+    user: yunyou_user
+    virtualcurrency: yunyou_virtualcurrency
+PRD.DBconfig:
+  host: 59.111.124.211
+  port: 33161
+  user: root
+  pwd: zhMysql6567
+  batabase:
+    customer: yunyou_customer
+    file: yunyou_file
+    gameproject: yunyou_gameproject
+    goods: yunyou_goods
+    message: yunyou_message
+    order: yunyou_order
+    price: yunyou_price
+    promotion: yunyou_promotion
+    schedule: yunyou_schedule
+    terminal: yunyou_terminal
+    thirdpartypay: yunyou_thirdpartypay
+    ui: yunyou_ui
+    user: yunyou_user
+    virtualcurrency: yunyou_virtualcurrency
+
+sqlserver.config:
+  host: 192.168.1.153
+  port: 1433
+  user: sa
+  pwd: ych123456.

@@ -1,0 +1,9 @@
+首页:
+    订单管理: //*[text()='订单管理']
+数据:
+    订单号: DSa4d9190428000135
+订单管理:
+    头部查询框: //*[@id="app"]/div/div[1]/div[2]/div[1]/div/div/input
+    跳转查询框: //*[@id="app"]/div/div[2]/div[2]/div/form/div/div[1]/div/div/input
+断言:
+    查询订单号: //*[@id="app"]/div/div[2]/div[1]/div/div/div/div[2]/div[1]/div/div[1]/div[1]/p

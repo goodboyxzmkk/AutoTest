@@ -1,0 +1,14 @@
+UAT:
+    URL: http://zh.rapa.vip/appyunyoutenant/login
+    browserType: H5 #firefox、chrome、ie、h5
+数据:
+    用户名: 18565341845
+    密码: 654321
+登录页面:
+    用户名: //*[@type='tel']
+    密码: //*[@type='password']
+    登录按键: //*[text()='登录']/parent::button
+    登录主体: //*[@id="app"]/div/div/div[2]/div/div/div[2]/div/div/div[2]/div[1]
+    确认登录: /html/body/div[3]/div/div[3]/div[2]/button
+断言:
+    我的: //*[@id="app"]/div/div/div[2]/div[3]/div[2]

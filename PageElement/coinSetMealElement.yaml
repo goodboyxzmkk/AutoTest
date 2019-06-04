@@ -1,0 +1,18 @@
+首页:
+  游戏币套餐: //*[text()='游戏币套餐']
+游戏币套餐:
+  选择门店: //*[@id="app"]/div/div[2]/div[1]/div/div[2]
+  查询输入框: //*[@id="app"]/div/div[2]/div[1]/div/div/div/div/input
+  跳转查询框: //*[@id="app"]/div/div[2]/div[3]/div/form/div/div[1]/div/div/input
+  门店内新增按键: //*[@id="app"]/div/div[2]/div[3]/i
+  门店外新增按键: //*[@id="app"]/div/div[2]/div[2]/i
+  游戏币: //input[@placeholder='请输入游戏币数量']
+  售价: //input[@placeholder='请输入游戏币售价']
+  兑换开关: //*[@id="app"]/div/div[2]/div/div[1]/div[2]/div[1]/div[2]/div
+  兑换积分: //input[@placeholder='请输入兑换积分']
+  保存按键: //*[@id="app"]/div/div[1]/div[3]
+  设置上架门店: //*[@id="app"]/div/div[2]/button
+  门店1:
+断言:
+  查询套餐名称: //*[@id="app"]/div/div[2]/div[2]/div/div/div[1]/div[1]
+  新增查询: select * from yunyou_customer
