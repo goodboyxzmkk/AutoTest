@@ -15,7 +15,8 @@ if __name__ == "__main__":
     now = time.strftime("%Y-%m-%d %H-%M-%S")
     # html_file = ConfigManage.reportPath + now + ".html"  #每次生成一份新的测试报告
     html_file = ConfigManage.reportPath + "TestResult_Report.html"  # 固定生成一份测试报告
-    fp = open(html_file, "wb")  # wb以二进制格式打开一个文件只用于写入。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。
+    '''wb以二进制格式打开一个文件只用于写入。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。'''
+    fp = open(html_file, "wb")
     runner = unittest.TextTestRunner()
     runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title='芸苔自动化测试报告', description='用例执行情况:')
     runner.run(suite)
