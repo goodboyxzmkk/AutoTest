@@ -22,4 +22,4 @@ if __name__ == "__main__":
     fp.close()
 
     # 发送邮件
-    # SendEmail.send_Email()
+    SendEmail.send_Email()
