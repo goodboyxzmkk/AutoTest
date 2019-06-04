@@ -50,7 +50,7 @@ def switch_handel(self):
 
 # 输入框输入方法
 def input(self, type, loc, value):
-    highlight_element(self, type, loc)
+    # highlight_element(self, type, loc)
     if type == By.XPATH:
         self.driver.find_element(By.XPATH, loc).send_keys(value)
     elif type == By.CLASS_NAME:
@@ -96,7 +96,7 @@ def input_and_KeyEnter(self, type, loc, value):
 
 # 点击方法
 def click(self, type, loc):
-    highlight_element(self, type, loc)
+    # highlight_element(self, type, loc)
     if type == By.XPATH:
         self.driver.find_element(By.XPATH, loc).click()
     elif type == By.CLASS_NAME:

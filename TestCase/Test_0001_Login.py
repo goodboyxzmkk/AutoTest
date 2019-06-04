@@ -6,7 +6,7 @@ from Utils import SeleniumUtils
 loginElement = ConfigManage.get_yaml_pagedic('loginElement.yaml')
 
 
-# @unittest.skip('无条件跳过用例')
+@unittest.skip('无条件跳过用例')
 class Test_LoginClass(TestCaseBase.TestBaseClass):
 
     def test_001_loginCase(self):

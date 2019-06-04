@@ -200,9 +200,9 @@
         
     <div class='page-header'>
         <h1>芸苔自动化测试报告</h1>
-    <p class='attribute'><strong>开始时间:</strong> 2019-05-25 18:08:51</p>
-<p class='attribute'><strong>运行时长:</strong> 0:00:41.757507</p>
-<p class='attribute'><strong>状态:</strong> 通过 1 错误 2</p>
+    <p class='attribute'><strong>开始时间:</strong> 2019-06-04 19:09:21</p>
+<p class='attribute'><strong>运行时长:</strong> 0:00:26.145795</p>
+<p class='attribute'><strong>状态:</strong> 错误 2</p>
 
     </div>
     <div style="float: left;width:50%;"><p class='description'>用例执行情况:</p></div>
@@ -233,59 +233,25 @@
             <td>查看</td>
         </tr>
         
-    <tr class='passClass'>
-        <td>Test_0001_Login.Test_LoginClass</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>0</td>
-        <td><a href="javascript:showClassDetail('c1',1)">详情</a></td>
-    </tr>
-
-<tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_001_loginCase</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
-        通过</a>
-
-    <div id='div_pt1.1' class="popup_window">
-        <pre>pt1.1: ===========setUp:测试用例开始=============
-【打开浏览器】：H5
-【打开URL】：http://zh.rapa.vip/appyunyoutenant/login
-【输入】：18565341845 , 定位方式：xpath , 定位表达式：//*[@type='tel'],
-【输入】：654321 , 定位方式：xpath , 定位表达式：//*[@type='password'],
-【点击元素】 , 定位方式：xpath ， 定位表达式：//*[text()='登录']/parent::button，
-【点击元素】 , 定位方式：xpath ， 定位表达式：//*[@id="app"]/div/div/div[2]/div/div/div[2]/div/div/div[2]/div[1]，
-【点击元素】 , 定位方式：xpath ， 定位表达式：/html/body/div[3]/div/div[3]/div[2]/button，
-==============tearDown:测试用例结束===============
-</pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
     <tr class='errorClass'>
         <td>Test_0002_Order.Test_OrderManage</td>
         <td>2</td>
         <td>0</td>
         <td>0</td>
         <td>2</td>
-        <td><a href="javascript:showClassDetail('c2',2)">详情</a></td>
+        <td><a href="javascript:showClassDetail('c1',2)">详情</a></td>
     </tr>
 
-<tr id='ft2.1' class='none'>
+<tr id='ft1.1' class='none'>
     <td class='errorCase'><div class='testcase'>test_001_OrderManageCase_1: Dictionary that remembers insertion order</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
         错误</a>
 
-    <div id='div_ft2.1' class="popup_window">
-        <pre>ft2.1: ===========setUp:测试用例开始=============
+    <div id='div_ft1.1' class="popup_window">
+        <pre>ft1.1: ===========setUp:测试用例开始=============
 【打开浏览器】：H5
 【打开URL】：http://zh.rapa.vip/appyunyoutenant/login
 【输入】：18565341845 , 定位方式：xpath , 定位表达式：//*[@type='tel'],
@@ -295,19 +261,15 @@
 【点击元素】 , 定位方式：xpath ， 定位表达式：/html/body/div[3]/div/div[3]/div[2]/button，
 【默认登录成功】
 【点击元素】 , 定位方式：xpath ， 定位表达式：//*[text()='订单管理']，
-【异常截图路径】：D:\Programs\YunTaiTest2\Image\2019-05-25 18-09-15_test_001_OrderManageCase_1.png
+【异常截图路径】：D:\myworkspace\yuntai\Image\2019-06-04 19-09-31_test_001_OrderManageCase_1.png
 ==============tearDown:测试用例结束===============
 Traceback (most recent call last):
   File "D:\Programs\Python\Python37-32\lib\site-packages\ddt.py", line 145, in wrapper
     return func(self, *args, **kwargs)
-  File "D:\Programs\YunTaiTest2\TestCase\Test_0002_Order.py", line 21, in test_001_OrderManageCase
+  File "D:\myworkspace\yuntai\TestCase\Test_0002_Order.py", line 21, in test_001_OrderManageCase
     SeleniumUtils.click(self, type.xpath, orderElement['订单管理']['头部查询框'])
-  File "D:\Programs\YunTaiTest2\Utils\SeleniumUtils.py", line 100, in click
-    highlight_element(self, type, loc)
-  File "D:\Programs\YunTaiTest2\Utils\SeleniumUtils.py", line 141, in highlight_element
-    element = self.driver.find_element_by_xpath(loc)
-  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
-    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\myworkspace\yuntai\Utils\SeleniumUtils.py", line 101, in click
+    self.driver.find_element(By.XPATH, loc).click()
   File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
     'value': value})['value']
   File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
@@ -325,16 +287,16 @@ selenium.common.exceptions.NoSuchElementException: Message: no such element: Una
     </td>
 </tr>
 
-<tr id='ft2.2' class='none'>
+<tr id='ft1.2' class='none'>
     <td class='errorCase'><div class='testcase'>test_001_OrderManageCase_2: Dictionary that remembers insertion order</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.2')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
         错误</a>
 
-    <div id='div_ft2.2' class="popup_window">
-        <pre>ft2.2: ===========setUp:测试用例开始=============
+    <div id='div_ft1.2' class="popup_window">
+        <pre>ft1.2: ===========setUp:测试用例开始=============
 【打开浏览器】：H5
 【打开URL】：http://zh.rapa.vip/appyunyoutenant/login
 【输入】：18565341845 , 定位方式：xpath , 定位表达式：//*[@type='tel'],
@@ -344,19 +306,15 @@ selenium.common.exceptions.NoSuchElementException: Message: no such element: Una
 【点击元素】 , 定位方式：xpath ， 定位表达式：/html/body/div[3]/div/div[3]/div[2]/button，
 【默认登录成功】
 【点击元素】 , 定位方式：xpath ， 定位表达式：//*[text()='订单管理']，
-【异常截图路径】：D:\Programs\YunTaiTest2\Image\2019-05-25 18-09-30_test_001_OrderManageCase_2.png
+【异常截图路径】：D:\myworkspace\yuntai\Image\2019-06-04 19-09-44_test_001_OrderManageCase_2.png
 ==============tearDown:测试用例结束===============
 Traceback (most recent call last):
   File "D:\Programs\Python\Python37-32\lib\site-packages\ddt.py", line 145, in wrapper
     return func(self, *args, **kwargs)
-  File "D:\Programs\YunTaiTest2\TestCase\Test_0002_Order.py", line 21, in test_001_OrderManageCase
+  File "D:\myworkspace\yuntai\TestCase\Test_0002_Order.py", line 21, in test_001_OrderManageCase
     SeleniumUtils.click(self, type.xpath, orderElement['订单管理']['头部查询框'])
-  File "D:\Programs\YunTaiTest2\Utils\SeleniumUtils.py", line 100, in click
-    highlight_element(self, type, loc)
-  File "D:\Programs\YunTaiTest2\Utils\SeleniumUtils.py", line 141, in highlight_element
-    element = self.driver.find_element_by_xpath(loc)
-  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
-    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\myworkspace\yuntai\Utils\SeleniumUtils.py", line 101, in click
+    self.driver.find_element(By.XPATH, loc).click()
   File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
     'value': value})['value']
   File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
@@ -376,8 +334,8 @@ selenium.common.exceptions.NoSuchElementException: Message: no such element: Una
 
         <tr id='total_row'>
             <td>总计</td>
-            <td>3</td>
-            <td>1</td>
+            <td>2</td>
+            <td>0</td>
             <td>0</td>
             <td>2</td>
             <td>&nbsp;</td>
@@ -413,7 +371,7 @@ selenium.common.exceptions.NoSuchElementException: Message: no such element: Una
                     radius : '60%',
                     center: ['50%', '60%'],
                     data:[
-                        {value:1, name:'通过'},
+                        {value:0, name:'通过'},
                         {value:0, name:'失败'},
                         {value:2, name:'错误'}
                     ],

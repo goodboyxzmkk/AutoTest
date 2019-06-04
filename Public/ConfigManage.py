@@ -2,16 +2,22 @@
 import yaml
 import os
 
-projectPath = 'D:\\Programs\\YunTaiTest2'  # 项目路径
-reportPath = projectPath + '\\TestReport\\'  # 测试报告目录
-testCasePath = projectPath + '\\TestCase\\'  # 测试用例目录
-imagePath = projectPath + '\\Image\\'  # 错误截图目录
-dataPath = projectPath + '\\TestData\\'  # 测试数据目录
+projectPath = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))  # 项目路径
+# reportPath = projectPath + '\\TestReport\\'  # 测试报告目录
+# testCasePath = projectPath + '\\TestCase\\'  #测试用例目录
+# imagePath = projectPath + '\\Image\\'  # 错误截图目录
+# dataPath = projectPath + '\\TestData\\'  # 测试数据目录
+
+reportPath = os.path.join(projectPath,"TestReport\\")# 测试报告目录
+testCasePath = os.path.join(projectPath,"TestCase\\")# 测试用例目录
+imagePath = os.path.join(projectPath,"Image\\")# 错误截图目录
+dataPath = os.path.join(projectPath,"TestData\\")# 测试数据目录
+
 
 
 def get_default_configdic():
     # config yaml文件目录
-    configpath = projectPath + '\\ConfigFile'
+    configpath = os.path.join(projectPath,"ConfigFile")
     yamlPath = os.path.join(configpath, "Config.yaml")  # 拼接config.yaml文件
     # open方法打开直接读出来
     # projectPath + '\\ConfigFile\\Config.yaml'
@@ -24,7 +30,7 @@ def get_default_configdic():
 
 def get_configdic(configName):
     # config yaml文件目录
-    configpath = projectPath + '\\ConfigFile'
+    configpath = configpath = os.path.join(projectPath,"ConfigFile")
     yamlPath = os.path.join(configpath, configName)  # 拼接config.yaml文件
     # open方法打开直接读出来
     # projectPath + '\\ConfigFile\\Config.yaml'
