@@ -1,7 +1,7 @@
-import unittest, json, time, os
-from Public import TestCaseBase, ConfigManage
-from Public.LocationType import Location as type
-from Utils import SeleniumUtils, ReadFileUtils
+import unittest, time
+from Common import TestCaseBase, ConfigManage
+from selenium.webdriver.common.by import By
+from Utils import ReadFileUtils
 from ddt import ddt, data, unpack
 
 orderElement = ConfigManage.get_yaml_pagedic('orderManageElement.yaml')
@@ -16,13 +16,13 @@ class Test_OrderManage(TestCaseBase.TestBaseClass):
     def test_001_OrderManageCase(self, data):
         super().DefaultLogin()
         time.sleep(1)
-        SeleniumUtils.click(self, type.xpath, orderElement['首页']['订单管理'])
+        self.seleniumutils.click(By.XPATH, orderElement['首页']['订单管理'])
         time.sleep(1)
-        SeleniumUtils.click(self, type.xpath, orderElement['订单管理']['头部查询框'])
+        self.seleniumutils.click(By.XPATH, orderElement['订单管理']['头部查询框'])
         time.sleep(3)
-        SeleniumUtils.input_and_KeyEnter(self, type.xpath, orderElement['订单管理']['跳转查询框'], data['订单号'])
+        self.seleniumutils.input_and_KeyEnter(By.XPATH, orderElement['订单管理']['跳转查询框'], data['订单号'])
         time.sleep(1)
-        retult = SeleniumUtils.get_text(self, type.xpath, orderElement['断言']['查询订单号'])
+        retult = self.seleniumutils.get_text(By.XPATH, orderElement['断言']['查询订单号'])
         self.assertEqual(retult, data['订单号'])
         self.flag = False
 

@@ -8,7 +8,7 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.keys import Keys
-from Public import ConfigManage
+from Common import ConfigManage
 
 
 # 前进

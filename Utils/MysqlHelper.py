@@ -1,6 +1,6 @@
 import pymysql
 
-from Public import ConfigManage
+from Common import ConfigManage
 
 config = ConfigManage.get_default_configdic()
 

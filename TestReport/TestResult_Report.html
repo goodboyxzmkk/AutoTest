@@ -200,9 +200,9 @@
         
     <div class='page-header'>
         <h1>芸苔自动化测试报告</h1>
-    <p class='attribute'><strong>开始时间:</strong> 2019-06-04 19:09:21</p>
-<p class='attribute'><strong>运行时长:</strong> 0:00:26.145795</p>
-<p class='attribute'><strong>状态:</strong> 错误 2</p>
+    <p class='attribute'><strong>开始时间:</strong> 2019-06-19 16:42:54</p>
+<p class='attribute'><strong>运行时长:</strong> 0:02:57.446341</p>
+<p class='attribute'><strong>状态:</strong> 通过 1 错误 11</p>
 
     </div>
     <div style="float: left;width:50%;"><p class='description'>用例执行情况:</p></div>
@@ -233,25 +233,95 @@
             <td>查看</td>
         </tr>
         
+    <tr class='passClass'>
+        <td>Test_0001_Login.Test_LoginClass</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td><a href="javascript:showClassDetail('c1',1)">详情</a></td>
+    </tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_001_loginCase</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        通过</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <pre>pt1.1: ===========setUp:测试用例开始=============
+【打开浏览器】：H5
+【打开URL】：http://zh.rapa.vip/appyunyoutenant/login
+【输入】：18565341845 , 定位方式：xpath , 定位表达式：//*[@type='tel'],
+【输入】：654321 , 定位方式：xpath , 定位表达式：//*[@type='password'],
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[text()='登录']/parent::button，
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[@id="app"]/div/div/div[2]/div/div/div[2]/div/div/div[2]/div[1]，
+【点击元素】 , 定位方式：xpath ， 定位表达式：/html/body/div[3]/div/div[3]/div[2]/button，
+【获取元素文本】 , 定位方式：xpath ， 定位表达式：//*[@id="app"]/div/div/div[2]/div[3]/div[2]
+==============tearDown:测试用例结束===============
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+    <tr class='errorClass'>
+        <td>unittest.loader._FailedTest</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td><a href="javascript:showClassDetail('c2',1)">详情</a></td>
+    </tr>
+
+<tr id='ft2.1' class='none'>
+    <td class='errorCase'><div class='testcase'>Test_0001_Login2</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
+        错误</a>
+
+    <div id='div_ft2.1' class="popup_window">
+        <pre>ft2.1: ImportError: Failed to import test module: Test_0001_Login2
+Traceback (most recent call last):
+  File "D:\Programs\Python\Python37-32\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "D:\Programs\Python\Python37-32\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "D:\myworkspace\yuntai\TestCase\Test_0001_Login2.py", line 4, in &lt;module&gt;
+    from Utils import SeleniumUtils,SeleniumUtils2
+ImportError: cannot import name 'SeleniumUtils' from 'Utils' (unknown location)
+
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
     <tr class='errorClass'>
         <td>Test_0002_Order.Test_OrderManage</td>
         <td>2</td>
         <td>0</td>
         <td>0</td>
         <td>2</td>
-        <td><a href="javascript:showClassDetail('c1',2)">详情</a></td>
+        <td><a href="javascript:showClassDetail('c3',2)">详情</a></td>
     </tr>
 
-<tr id='ft1.1' class='none'>
+<tr id='ft3.1' class='none'>
     <td class='errorCase'><div class='testcase'>test_001_OrderManageCase_1: Dictionary that remembers insertion order</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.1')" >
         错误</a>
 
-    <div id='div_ft1.1' class="popup_window">
-        <pre>ft1.1: ===========setUp:测试用例开始=============
+    <div id='div_ft3.1' class="popup_window">
+        <pre>ft3.1: ===========setUp:测试用例开始=============
 【打开浏览器】：H5
 【打开URL】：http://zh.rapa.vip/appyunyoutenant/login
 【输入】：18565341845 , 定位方式：xpath , 定位表达式：//*[@type='tel'],
@@ -261,15 +331,17 @@
 【点击元素】 , 定位方式：xpath ， 定位表达式：/html/body/div[3]/div/div[3]/div[2]/button，
 【默认登录成功】
 【点击元素】 , 定位方式：xpath ， 定位表达式：//*[text()='订单管理']，
-【异常截图路径】：D:\myworkspace\yuntai\Image\2019-06-04 19-09-31_test_001_OrderManageCase_1.png
+【异常截图路径】：D:\myworkspace\yuntai\Image\2019-06-19 16-43-44_test_001_OrderManageCase_1.png
 ==============tearDown:测试用例结束===============
 Traceback (most recent call last):
   File "D:\Programs\Python\Python37-32\lib\site-packages\ddt.py", line 145, in wrapper
     return func(self, *args, **kwargs)
   File "D:\myworkspace\yuntai\TestCase\Test_0002_Order.py", line 21, in test_001_OrderManageCase
-    SeleniumUtils.click(self, type.xpath, orderElement['订单管理']['头部查询框'])
-  File "D:\myworkspace\yuntai\Utils\SeleniumUtils.py", line 101, in click
-    self.driver.find_element(By.XPATH, loc).click()
+    self.seleniumutils.click(By.XPATH, orderElement['订单管理']['头部查询框'])
+  File "D:\myworkspace\yuntai\Utils\SeleniumUtils2.py", line 82, in click
+    self.highlight_element(by, loc)
+  File "D:\myworkspace\yuntai\Utils\SeleniumUtils2.py", line 104, in highlight_element
+    element = self.driver.find_element(by, loc)
   File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
     'value': value})['value']
   File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
@@ -287,16 +359,16 @@ selenium.common.exceptions.NoSuchElementException: Message: no such element: Una
     </td>
 </tr>
 
-<tr id='ft1.2' class='none'>
+<tr id='ft3.2' class='none'>
     <td class='errorCase'><div class='testcase'>test_001_OrderManageCase_2: Dictionary that remembers insertion order</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.2')" >
         错误</a>
 
-    <div id='div_ft1.2' class="popup_window">
-        <pre>ft1.2: ===========setUp:测试用例开始=============
+    <div id='div_ft3.2' class="popup_window">
+        <pre>ft3.2: ===========setUp:测试用例开始=============
 【打开浏览器】：H5
 【打开URL】：http://zh.rapa.vip/appyunyoutenant/login
 【输入】：18565341845 , 定位方式：xpath , 定位表达式：//*[@type='tel'],
@@ -306,15 +378,17 @@ selenium.common.exceptions.NoSuchElementException: Message: no such element: Una
 【点击元素】 , 定位方式：xpath ， 定位表达式：/html/body/div[3]/div/div[3]/div[2]/button，
 【默认登录成功】
 【点击元素】 , 定位方式：xpath ， 定位表达式：//*[text()='订单管理']，
-【异常截图路径】：D:\myworkspace\yuntai\Image\2019-06-04 19-09-44_test_001_OrderManageCase_2.png
+【异常截图路径】：D:\myworkspace\yuntai\Image\2019-06-19 16-43-58_test_001_OrderManageCase_2.png
 ==============tearDown:测试用例结束===============
 Traceback (most recent call last):
   File "D:\Programs\Python\Python37-32\lib\site-packages\ddt.py", line 145, in wrapper
     return func(self, *args, **kwargs)
   File "D:\myworkspace\yuntai\TestCase\Test_0002_Order.py", line 21, in test_001_OrderManageCase
-    SeleniumUtils.click(self, type.xpath, orderElement['订单管理']['头部查询框'])
-  File "D:\myworkspace\yuntai\Utils\SeleniumUtils.py", line 101, in click
-    self.driver.find_element(By.XPATH, loc).click()
+    self.seleniumutils.click(By.XPATH, orderElement['订单管理']['头部查询框'])
+  File "D:\myworkspace\yuntai\Utils\SeleniumUtils2.py", line 82, in click
+    self.highlight_element(by, loc)
+  File "D:\myworkspace\yuntai\Utils\SeleniumUtils2.py", line 104, in highlight_element
+    element = self.driver.find_element(by, loc)
   File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
     'value': value})['value']
   File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
@@ -322,6 +396,391 @@ Traceback (most recent call last):
   File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
     raise exception_class(message, screen, stacktrace)
 selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[1]/div[2]/div[1]/div/div/input"}
+  (Session info: chrome=74.0.3729.108)
+  (Driver info: chromedriver=70.0.3538.97 (d035916fe243477005bc95fe2a5778b8f20b6ae1),platform=Windows NT 10.0.17134 x86_64)
+
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+    <tr class='errorClass'>
+        <td>Test_coinSetMeal.Test_0003_coinSetMeal_01.Test_CoinSetMeal</td>
+        <td>8</td>
+        <td>0</td>
+        <td>0</td>
+        <td>8</td>
+        <td><a href="javascript:showClassDetail('c4',8)">详情</a></td>
+    </tr>
+
+<tr id='ft4.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_001_coinSetMealCase_1: Dictionary that remembers insertion order</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.1')" >
+        错误</a>
+
+    <div id='div_ft4.1' class="popup_window">
+        <pre>ft4.1: ===========setUp:测试用例开始=============
+【打开浏览器】：H5
+【打开URL】：http://zh.rapa.vip/appyunyoutenant/login
+【输入】：18565341845 , 定位方式：xpath , 定位表达式：//*[@type='tel'],
+【输入】：654321 , 定位方式：xpath , 定位表达式：//*[@type='password'],
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[text()='登录']/parent::button，
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[@id="app"]/div/div/div[2]/div/div/div[2]/div/div/div[2]/div[1]，
+【点击元素】 , 定位方式：xpath ， 定位表达式：/html/body/div[3]/div/div[3]/div[2]/button，
+【默认登录成功】
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[text()='游戏币套餐']，
+【异常截图路径】：D:\myworkspace\yuntai\Image\2019-06-19 16-44-13_test_001_coinSetMealCase_1.png
+==============tearDown:测试用例结束===============
+Traceback (most recent call last):
+  File "D:\Programs\Python\Python37-32\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\myworkspace\yuntai\TestCase\Test_coinSetMeal\Test_0003_coinSetMeal_01.py", line 28, in test_001_coinSetMealCase
+    self.seleniumutils.click(By.XPATH, coinSetMealElement['游戏币套餐']['选择门店'])
+  File "D:\myworkspace\yuntai\Utils\SeleniumUtils2.py", line 82, in click
+    self.highlight_element(by, loc)
+  File "D:\myworkspace\yuntai\Utils\SeleniumUtils2.py", line 104, in highlight_element
+    element = self.driver.find_element(by, loc)
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[2]/div[1]/div/div[2]"}
+  (Session info: chrome=74.0.3729.108)
+  (Driver info: chromedriver=70.0.3538.97 (d035916fe243477005bc95fe2a5778b8f20b6ae1),platform=Windows NT 10.0.17134 x86_64)
+
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_001_coinSetMealCase_2: Dictionary that remembers insertion order</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.2')" >
+        错误</a>
+
+    <div id='div_ft4.2' class="popup_window">
+        <pre>ft4.2: ===========setUp:测试用例开始=============
+【打开浏览器】：H5
+【打开URL】：http://zh.rapa.vip/appyunyoutenant/login
+【输入】：18565341845 , 定位方式：xpath , 定位表达式：//*[@type='tel'],
+【输入】：654321 , 定位方式：xpath , 定位表达式：//*[@type='password'],
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[text()='登录']/parent::button，
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[@id="app"]/div/div/div[2]/div/div/div[2]/div/div/div[2]/div[1]，
+【点击元素】 , 定位方式：xpath ， 定位表达式：/html/body/div[3]/div/div[3]/div[2]/button，
+【默认登录成功】
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[text()='游戏币套餐']，
+【异常截图路径】：D:\myworkspace\yuntai\Image\2019-06-19 16-44-27_test_001_coinSetMealCase_2.png
+==============tearDown:测试用例结束===============
+Traceback (most recent call last):
+  File "D:\Programs\Python\Python37-32\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\myworkspace\yuntai\TestCase\Test_coinSetMeal\Test_0003_coinSetMeal_01.py", line 28, in test_001_coinSetMealCase
+    self.seleniumutils.click(By.XPATH, coinSetMealElement['游戏币套餐']['选择门店'])
+  File "D:\myworkspace\yuntai\Utils\SeleniumUtils2.py", line 82, in click
+    self.highlight_element(by, loc)
+  File "D:\myworkspace\yuntai\Utils\SeleniumUtils2.py", line 104, in highlight_element
+    element = self.driver.find_element(by, loc)
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[2]/div[1]/div/div[2]"}
+  (Session info: chrome=74.0.3729.108)
+  (Driver info: chromedriver=70.0.3538.97 (d035916fe243477005bc95fe2a5778b8f20b6ae1),platform=Windows NT 10.0.17134 x86_64)
+
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_001_coinSetMealCase_3: Dictionary that remembers insertion order</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.3')" >
+        错误</a>
+
+    <div id='div_ft4.3' class="popup_window">
+        <pre>ft4.3: ===========setUp:测试用例开始=============
+【打开浏览器】：H5
+【打开URL】：http://zh.rapa.vip/appyunyoutenant/login
+【输入】：18565341845 , 定位方式：xpath , 定位表达式：//*[@type='tel'],
+【输入】：654321 , 定位方式：xpath , 定位表达式：//*[@type='password'],
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[text()='登录']/parent::button，
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[@id="app"]/div/div/div[2]/div/div/div[2]/div/div/div[2]/div[1]，
+【点击元素】 , 定位方式：xpath ， 定位表达式：/html/body/div[3]/div/div[3]/div[2]/button，
+【默认登录成功】
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[text()='游戏币套餐']，
+【异常截图路径】：D:\myworkspace\yuntai\Image\2019-06-19 16-44-40_test_001_coinSetMealCase_3.png
+==============tearDown:测试用例结束===============
+Traceback (most recent call last):
+  File "D:\Programs\Python\Python37-32\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\myworkspace\yuntai\TestCase\Test_coinSetMeal\Test_0003_coinSetMeal_01.py", line 28, in test_001_coinSetMealCase
+    self.seleniumutils.click(By.XPATH, coinSetMealElement['游戏币套餐']['选择门店'])
+  File "D:\myworkspace\yuntai\Utils\SeleniumUtils2.py", line 82, in click
+    self.highlight_element(by, loc)
+  File "D:\myworkspace\yuntai\Utils\SeleniumUtils2.py", line 104, in highlight_element
+    element = self.driver.find_element(by, loc)
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[2]/div[1]/div/div[2]"}
+  (Session info: chrome=74.0.3729.108)
+  (Driver info: chromedriver=70.0.3538.97 (d035916fe243477005bc95fe2a5778b8f20b6ae1),platform=Windows NT 10.0.17134 x86_64)
+
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_001_coinSetMealCase_4: Dictionary that remembers insertion order</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.4')" >
+        错误</a>
+
+    <div id='div_ft4.4' class="popup_window">
+        <pre>ft4.4: ===========setUp:测试用例开始=============
+【打开浏览器】：H5
+【打开URL】：http://zh.rapa.vip/appyunyoutenant/login
+【输入】：18565341845 , 定位方式：xpath , 定位表达式：//*[@type='tel'],
+【输入】：654321 , 定位方式：xpath , 定位表达式：//*[@type='password'],
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[text()='登录']/parent::button，
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[@id="app"]/div/div/div[2]/div/div/div[2]/div/div/div[2]/div[1]，
+【点击元素】 , 定位方式：xpath ， 定位表达式：/html/body/div[3]/div/div[3]/div[2]/button，
+【默认登录成功】
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[text()='游戏币套餐']，
+【异常截图路径】：D:\myworkspace\yuntai\Image\2019-06-19 16-44-54_test_001_coinSetMealCase_4.png
+==============tearDown:测试用例结束===============
+Traceback (most recent call last):
+  File "D:\Programs\Python\Python37-32\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\myworkspace\yuntai\TestCase\Test_coinSetMeal\Test_0003_coinSetMeal_01.py", line 28, in test_001_coinSetMealCase
+    self.seleniumutils.click(By.XPATH, coinSetMealElement['游戏币套餐']['选择门店'])
+  File "D:\myworkspace\yuntai\Utils\SeleniumUtils2.py", line 82, in click
+    self.highlight_element(by, loc)
+  File "D:\myworkspace\yuntai\Utils\SeleniumUtils2.py", line 104, in highlight_element
+    element = self.driver.find_element(by, loc)
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[2]/div[1]/div/div[2]"}
+  (Session info: chrome=74.0.3729.108)
+  (Driver info: chromedriver=70.0.3538.97 (d035916fe243477005bc95fe2a5778b8f20b6ae1),platform=Windows NT 10.0.17134 x86_64)
+
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_001_coinSetMealCase_5: Dictionary that remembers insertion order</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.5')" >
+        错误</a>
+
+    <div id='div_ft4.5' class="popup_window">
+        <pre>ft4.5: ===========setUp:测试用例开始=============
+【打开浏览器】：H5
+【打开URL】：http://zh.rapa.vip/appyunyoutenant/login
+【输入】：18565341845 , 定位方式：xpath , 定位表达式：//*[@type='tel'],
+【输入】：654321 , 定位方式：xpath , 定位表达式：//*[@type='password'],
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[text()='登录']/parent::button，
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[@id="app"]/div/div/div[2]/div/div/div[2]/div/div/div[2]/div[1]，
+【点击元素】 , 定位方式：xpath ， 定位表达式：/html/body/div[3]/div/div[3]/div[2]/button，
+【默认登录成功】
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[text()='游戏币套餐']，
+【异常截图路径】：D:\myworkspace\yuntai\Image\2019-06-19 16-45-08_test_001_coinSetMealCase_5.png
+==============tearDown:测试用例结束===============
+Traceback (most recent call last):
+  File "D:\Programs\Python\Python37-32\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\myworkspace\yuntai\TestCase\Test_coinSetMeal\Test_0003_coinSetMeal_01.py", line 28, in test_001_coinSetMealCase
+    self.seleniumutils.click(By.XPATH, coinSetMealElement['游戏币套餐']['选择门店'])
+  File "D:\myworkspace\yuntai\Utils\SeleniumUtils2.py", line 82, in click
+    self.highlight_element(by, loc)
+  File "D:\myworkspace\yuntai\Utils\SeleniumUtils2.py", line 104, in highlight_element
+    element = self.driver.find_element(by, loc)
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[2]/div[1]/div/div[2]"}
+  (Session info: chrome=74.0.3729.108)
+  (Driver info: chromedriver=70.0.3538.97 (d035916fe243477005bc95fe2a5778b8f20b6ae1),platform=Windows NT 10.0.17134 x86_64)
+
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.6' class='none'>
+    <td class='errorCase'><div class='testcase'>test_001_coinSetMealCase_6: Dictionary that remembers insertion order</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.6')" >
+        错误</a>
+
+    <div id='div_ft4.6' class="popup_window">
+        <pre>ft4.6: ===========setUp:测试用例开始=============
+【打开浏览器】：H5
+【打开URL】：http://zh.rapa.vip/appyunyoutenant/login
+【输入】：18565341845 , 定位方式：xpath , 定位表达式：//*[@type='tel'],
+【输入】：654321 , 定位方式：xpath , 定位表达式：//*[@type='password'],
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[text()='登录']/parent::button，
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[@id="app"]/div/div/div[2]/div/div/div[2]/div/div/div[2]/div[1]，
+【点击元素】 , 定位方式：xpath ， 定位表达式：/html/body/div[3]/div/div[3]/div[2]/button，
+【默认登录成功】
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[text()='游戏币套餐']，
+【异常截图路径】：D:\myworkspace\yuntai\Image\2019-06-19 16-45-22_test_001_coinSetMealCase_6.png
+==============tearDown:测试用例结束===============
+Traceback (most recent call last):
+  File "D:\Programs\Python\Python37-32\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\myworkspace\yuntai\TestCase\Test_coinSetMeal\Test_0003_coinSetMeal_01.py", line 28, in test_001_coinSetMealCase
+    self.seleniumutils.click(By.XPATH, coinSetMealElement['游戏币套餐']['选择门店'])
+  File "D:\myworkspace\yuntai\Utils\SeleniumUtils2.py", line 82, in click
+    self.highlight_element(by, loc)
+  File "D:\myworkspace\yuntai\Utils\SeleniumUtils2.py", line 104, in highlight_element
+    element = self.driver.find_element(by, loc)
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[2]/div[1]/div/div[2]"}
+  (Session info: chrome=74.0.3729.108)
+  (Driver info: chromedriver=70.0.3538.97 (d035916fe243477005bc95fe2a5778b8f20b6ae1),platform=Windows NT 10.0.17134 x86_64)
+
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.7' class='none'>
+    <td class='errorCase'><div class='testcase'>test_001_coinSetMealCase_7: Dictionary that remembers insertion order</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.7')" >
+        错误</a>
+
+    <div id='div_ft4.7' class="popup_window">
+        <pre>ft4.7: ===========setUp:测试用例开始=============
+【打开浏览器】：H5
+【打开URL】：http://zh.rapa.vip/appyunyoutenant/login
+【输入】：18565341845 , 定位方式：xpath , 定位表达式：//*[@type='tel'],
+【输入】：654321 , 定位方式：xpath , 定位表达式：//*[@type='password'],
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[text()='登录']/parent::button，
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[@id="app"]/div/div/div[2]/div/div/div[2]/div/div/div[2]/div[1]，
+【点击元素】 , 定位方式：xpath ， 定位表达式：/html/body/div[3]/div/div[3]/div[2]/button，
+【默认登录成功】
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[text()='游戏币套餐']，
+【异常截图路径】：D:\myworkspace\yuntai\Image\2019-06-19 16-45-35_test_001_coinSetMealCase_7.png
+==============tearDown:测试用例结束===============
+Traceback (most recent call last):
+  File "D:\Programs\Python\Python37-32\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\myworkspace\yuntai\TestCase\Test_coinSetMeal\Test_0003_coinSetMeal_01.py", line 28, in test_001_coinSetMealCase
+    self.seleniumutils.click(By.XPATH, coinSetMealElement['游戏币套餐']['选择门店'])
+  File "D:\myworkspace\yuntai\Utils\SeleniumUtils2.py", line 82, in click
+    self.highlight_element(by, loc)
+  File "D:\myworkspace\yuntai\Utils\SeleniumUtils2.py", line 104, in highlight_element
+    element = self.driver.find_element(by, loc)
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[2]/div[1]/div/div[2]"}
+  (Session info: chrome=74.0.3729.108)
+  (Driver info: chromedriver=70.0.3538.97 (d035916fe243477005bc95fe2a5778b8f20b6ae1),platform=Windows NT 10.0.17134 x86_64)
+
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.8' class='none'>
+    <td class='errorCase'><div class='testcase'>test_001_coinSetMealCase_8: Dictionary that remembers insertion order</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.8')" >
+        错误</a>
+
+    <div id='div_ft4.8' class="popup_window">
+        <pre>ft4.8: ===========setUp:测试用例开始=============
+【打开浏览器】：H5
+【打开URL】：http://zh.rapa.vip/appyunyoutenant/login
+【输入】：18565341845 , 定位方式：xpath , 定位表达式：//*[@type='tel'],
+【输入】：654321 , 定位方式：xpath , 定位表达式：//*[@type='password'],
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[text()='登录']/parent::button，
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[@id="app"]/div/div/div[2]/div/div/div[2]/div/div/div[2]/div[1]，
+【点击元素】 , 定位方式：xpath ， 定位表达式：/html/body/div[3]/div/div[3]/div[2]/button，
+【默认登录成功】
+【点击元素】 , 定位方式：xpath ， 定位表达式：//*[text()='游戏币套餐']，
+【异常截图路径】：D:\myworkspace\yuntai\Image\2019-06-19 16-45-49_test_001_coinSetMealCase_8.png
+==============tearDown:测试用例结束===============
+Traceback (most recent call last):
+  File "D:\Programs\Python\Python37-32\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\myworkspace\yuntai\TestCase\Test_coinSetMeal\Test_0003_coinSetMeal_01.py", line 28, in test_001_coinSetMealCase
+    self.seleniumutils.click(By.XPATH, coinSetMealElement['游戏币套餐']['选择门店'])
+  File "D:\myworkspace\yuntai\Utils\SeleniumUtils2.py", line 82, in click
+    self.highlight_element(by, loc)
+  File "D:\myworkspace\yuntai\Utils\SeleniumUtils2.py", line 104, in highlight_element
+    element = self.driver.find_element(by, loc)
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\Programs\Python\Python37-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[2]/div[1]/div/div[2]"}
   (Session info: chrome=74.0.3729.108)
   (Driver info: chromedriver=70.0.3538.97 (d035916fe243477005bc95fe2a5778b8f20b6ae1),platform=Windows NT 10.0.17134 x86_64)
 
@@ -334,10 +793,10 @@ selenium.common.exceptions.NoSuchElementException: Message: no such element: Una
 
         <tr id='total_row'>
             <td>总计</td>
-            <td>2</td>
+            <td>12</td>
+            <td>1</td>
             <td>0</td>
-            <td>0</td>
-            <td>2</td>
+            <td>11</td>
             <td>&nbsp;</td>
         </tr>
     </table>
@@ -371,9 +830,9 @@ selenium.common.exceptions.NoSuchElementException: Message: no such element: Una
                     radius : '60%',
                     center: ['50%', '60%'],
                     data:[
-                        {value:0, name:'通过'},
+                        {value:1, name:'通过'},
                         {value:0, name:'失败'},
-                        {value:2, name:'错误'}
+                        {value:11, name:'错误'}
                     ],
                     itemStyle: {
                         emphasis: {

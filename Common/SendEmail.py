@@ -1,11 +1,11 @@
 import HTMLReport
 import time
 import smtplib
+import os
 from email.mime.text import MIMEText
 from email.header import Header
-import os
 from email.mime.multipart import MIMEMultipart
-from Public import ConfigManage
+from Common import ConfigManage
 
 # 测试报告路径
 report_path = ConfigManage.reportPath
@@ -28,10 +28,12 @@ def send_Email():
     f = open(file_new, 'rb')
     mail_body = f.read()
     f.close()
-    stmpserver = 'smtp.qq.com'
+
+    # 输入SMTP服务器地址:
+    stmp_server = 'smtp.qq.com'
     user = "546884207@qq.com"
-    # 这里填邮箱的授权码
-    password = "tclkaelcmrywbgai"
+    # 邮箱的授权码
+    password = "ydpfdxeeloepbeah"
     subject = '芸苔自动化测试报告'
 
     # 构造MIMEMultipart对象做为根容器
@@ -50,12 +52,15 @@ def send_Email():
     # 设置根容器属性
     msgRoot['Subject'] = Header(subject, 'utf-8')
     msgRoot['From'] = '546884207@qq.com'
-    msgRoot['To'] = '346315670@qq.com'
+    msgRoot['To'] = '346315670@qq.com,yeqisheng11@163.com'  #发送多个邮件时逗号（,）隔开
 
     # 连接发送邮件
     smtp = smtplib.SMTP()
-    smtp.connect(stmpserver)
-    smtp.login(user, password)
-    smtp.sendmail(msgRoot['From'], msgRoot['To'], msgRoot.as_string())
+    smtp.connect(stmp_server)
+    smtp.login(user,password)
+    smtp.sendmail(msgRoot['From'], msgRoot['To'].split(','), msgRoot.as_string())
     smtp.quit()
     print('测试报告发送成功！')
+
+if __name__ == '__main__':
+    send_Email()

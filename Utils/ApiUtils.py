@@ -1,6 +1,6 @@
 import requests
 
-from Public import ConfigManage
+from Common import ConfigManage
 
 apiconfig = ConfigManage.get_configdic("apiConfig.yaml")
 

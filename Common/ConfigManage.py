@@ -30,8 +30,8 @@ def get_default_configdic():
 
 def get_configdic(configName):
     # config yaml文件目录
-    configpath = configpath = os.path.join(projectPath,"ConfigFile")
-    yamlPath = os.path.join(configpath, configName)  # 拼接config.yaml文件
+    configpath = os.path.join(projectPath,"ConfigFile")
+    yamlPath = os.path.join(configpath, configName)  # configName.yaml文件
     # open方法打开直接读出来
     # projectPath + '\\ConfigFile\\Config.yaml'
     f = open(yamlPath, 'r', encoding='utf-8')
@@ -43,7 +43,7 @@ def get_configdic(configName):
 
 def get_yaml_pagedic(pageName):
     # 获取page元素定位目录
-    pagepath = projectPath + '\\PageElement'
+    pagepath = os.path.join(projectPath,"PageElement")
     yamlPath = os.path.join(pagepath, pageName)
     f = open(yamlPath, 'r', encoding='utf-8')
     cfg = f.read()  # 读出来是字符串

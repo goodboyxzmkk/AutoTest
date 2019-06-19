@@ -1,6 +1,6 @@
 # coding:utf-8
 import xlrd, csv
-from Public import ConfigManage
+from Common import ConfigManage
 
 
 def getdata_from_Excel(excelfile_Name, sheetName='Sheet1'):

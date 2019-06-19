@@ -5,7 +5,7 @@
 import unittest
 import time
 import HTMLTestRunner
-from Public import SendEmail, ConfigManage
+from Common import SendEmail, ConfigManage
 import os
 
 if __name__ == "__main__":
