@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
 Class-Path: fastjson-1.2.38.jar commons-pool2-2.5.0.jar gson-2.8.2.jar
   commons-codec-1.10.jar jedis-2.9.0.jar
-Main-Class: com.ych.test.mainClass
+Main-Class: com.ych.test.MainClass
 

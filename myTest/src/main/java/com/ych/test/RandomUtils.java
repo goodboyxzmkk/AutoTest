@@ -16,7 +16,7 @@ public class RandomUtils {
      * @return
      */
     public static String getRandomStr(int length) {
-        char[] nonceChars = new char[length];  //指定长度为6位/自己可以要求设置
+        char[] nonceChars = new char[length];  //指定长度
 
         for (int i = 0; i < nonceChars.length; i++) {
             nonceChars[i] = ALLCHAR.charAt(RANDOM.nextInt(ALLCHAR.length()));
