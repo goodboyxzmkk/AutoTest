@@ -1,0 +1,21 @@
+java -jar ./moco-runner-0.11.0-standalone.jar http -p 8899 -c startup1.json
+
+
+如浏览器访问接口中文乱码加：-Dfile.encoding=utf-8
+
+java -jar -Dfile.encoding=utf-8 ./moco-runner-0.11.0-standalone.jar http -p 8899 -c startupGet.json
+
+
+浏览器访问中文乱码时加入编码格式："Content-Type":"text/html;charset=gbk"
+
+快捷键：ctrl+c停止mock服务
+
+cookies 是key-value 形式
+
+传参方式：
+1.queries
+2.json   json body数据
+3.forms  表单参数
+
+去除代码重复提醒：
+inspections _ General _ Duplicated Code
