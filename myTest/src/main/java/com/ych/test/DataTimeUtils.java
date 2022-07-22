@@ -9,7 +9,7 @@ import java.util.List;
 public class DataTimeUtils {
 
 
-    public static List<String> getMonthDate() {
+    public static List<String> getMonthCalendar() {
 //        Calendar cale = null;
         /**cale = Calendar.getInstance();
          int year = cale.get(Calendar.YEAR);
@@ -44,7 +44,7 @@ public class DataTimeUtils {
      * @param year 相差年份
      * @return 返回前后年份列表
      */
-    public static List<String> getDateCalendar(int year) {
+    public static List<String> getYearCalendar(int year) {
         Calendar calendar = Calendar.getInstance();
         Date date = new Date();
         calendar.setTime(date);
@@ -62,7 +62,7 @@ public class DataTimeUtils {
 
     public static void main(String[] args) {
 
-        System.out.println("开始年份：" + getDateCalendar(1).get(0) + " 结束年份：" + getDateCalendar(1).get(1));
-        System.out.println("开始天数：" + getMonthDate().get(0) + " 结束天数：" + getMonthDate().get(1));
+        System.out.println("开始年份：" + getYearCalendar(1).get(0) + " 结束年份：" + getYearCalendar(1).get(1));
+        System.out.println("开始天数：" + getMonthCalendar().get(0) + " 结束天数：" + getMonthCalendar().get(1));
     }
 }

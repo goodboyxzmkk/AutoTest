@@ -41,6 +41,7 @@ public class RedisUtils {
     }
 
     public static void main(String[] args) {
+
         GetRedisToken("192.168.100.201", 6380);
     }
 }
